@@ -44,3 +44,14 @@ func ToString(arg interface{}) (str string) {
 func ascii_int_to_char(acode int) string {
   return string(rune(acode))
 }
+
+func ReverseString(str string) (result string) {
+  for _, v := range str {
+    result = string(v) + result
+  }
+  return 
+}
+
+func IsPalindrome(s1 string, s2 string) (ret bool) {
+  return ReverseString(s1) == ReverseString(s2)
+}
