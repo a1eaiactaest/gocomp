@@ -52,6 +52,6 @@ func ReverseString(str string) (result string) {
   return 
 }
 
-func IsPalindrome(s1 string, s2 string) (ret bool) {
+func IsPalindrome(s1 string) (ret bool) {
   return ReverseString(s1) == ReverseString(s2)
 }
