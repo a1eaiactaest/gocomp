@@ -70,10 +70,10 @@ func ManhattanDistance(x1, y1, x2, y2 int) int {
 	return x + y
 }
 
-func GetNthPrime(n int) int {
+func GetNthPrime(n int) (int, []int) {
   primes := []int{2,3}
 
-  for i:= primes[len(primes)-1] + 2; len(primes) <= n; i += 2 {
+  for i := primes[len(primes)-1] + 2; len(primes) <= n; i += 2 {
     for _, v := range primes {
       // not a prime
       if i % v == 0 {
@@ -87,5 +87,5 @@ func GetNthPrime(n int) int {
     }
   }
   
-  return primes[n-1]
+  return primes[n-1], primes
 }
