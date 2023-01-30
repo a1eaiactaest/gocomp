@@ -31,7 +31,7 @@ func AbsoluteInt(x int) int {
 }
 
 func SumIntSlice(nums []int) int {
-	var acc int
+	var acc int = 0
 	for _, v := range nums {
 		acc += v
 	}
@@ -39,7 +39,7 @@ func SumIntSlice(nums []int) int {
 }
 
 func ProdIntSlice(nums []int) int {
-	var ret int
+	var ret int = 1
 	for _, v := range nums {
 		ret *= v
 	}
