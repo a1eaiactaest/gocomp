@@ -69,3 +69,23 @@ func ManhattanDistance(x1, y1, x2, y2 int) int {
 
 	return x + y
 }
+
+func GetNthPrime(n int) int {
+  primes := []int{2,3}
+
+  for i:= primes[len(primes)-1] + 2; len(primes) <= n; i += 2 {
+    for _, v := range primes {
+      // not a prime
+      if i % v == 0 {
+        break
+      }
+
+      if math.Sqrt(float64(i)) < float64(v) {
+        primes = append(primes, i)
+        break
+      }
+    }
+  }
+  
+  return primes[n-1]
+}
