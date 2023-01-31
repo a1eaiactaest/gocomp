@@ -37,7 +37,7 @@ func PrimalityTest(x int) bool {
 
 func PrimesRange(n int) (primes []int) {
   for i := 0; i <= n; i++ {
-    if primalityTest(i) {
+    if PrimalityTest(i) {
       primes = append(primes, i)
     }
   }
