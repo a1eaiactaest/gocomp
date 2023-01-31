@@ -1,5 +1,9 @@
 package maths
 
+import (
+  "math"
+)
+
 // TODO: describe functions
 
 func GetNthPrime(n int) (int, []int) {
