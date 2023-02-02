@@ -70,18 +70,18 @@ func ManhattanDistance(x1, y1, x2, y2 int) int {
 	return x + y
 }
 
-func FactorInt(x int) (factors []int) {
+func FactorInt(n int) (factors []int) {
   var i float64 = 1.0
-  x = float64(x)
+  x := float64(n)
   for i <= math.Sqrt(float64(x)) {
-    if x % i == 0 {
+    if int(x % i) == 0 {
       if x / i == i {
         factors = append(factors, int(i))
       } else {
         factors = append(factors, int(i), int(x/i))
       }
     }
-    i += 1
+    i += 1.0
   }
   return 
 }
