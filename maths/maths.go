@@ -71,13 +71,16 @@ func ManhattanDistance(x1, y1, x2, y2 int) int {
 }
 
 func FactorInt(x int) (factors []int) {
-  primes := PrimesRange(x)
-
-  for prime := range primes {
-    if x % prime == 0 {
-      factors = append(factors, prime)
+  i := 1
+  for i <= math.Sqrt(x) {
+    if x % i == 0 {
+      if x / i == i {
+        factors = append(factors, i)
+      } else {
+        factors = append(factor, i, int(x/i))
+      }
     }
+    i += 1
   }
-  return 
 }
 
