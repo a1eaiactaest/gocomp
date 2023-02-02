@@ -70,4 +70,14 @@ func ManhattanDistance(x1, y1, x2, y2 int) int {
 	return x + y
 }
 
+func FactorInt(x int) (factors []int) {
+  primes := PrimeRange(x)
+
+  for prime := range primes {
+    if x % prime == 0 {
+      factors = append(factors, prime)
+    }
+  }
+  return 
+}
 
