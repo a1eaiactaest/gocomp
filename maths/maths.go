@@ -74,7 +74,7 @@ func FactorInt(n int) (factors []int) {
   var i float64 = 1.0
   x := float64(n)
   for i <= math.Sqrt(float64(x)) {
-    if int(x % i) == 0 {
+    if int(x) % int(i) == 0 {
       if x / i == i {
         factors = append(factors, int(i))
       } else {
