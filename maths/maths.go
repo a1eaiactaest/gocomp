@@ -71,7 +71,7 @@ func ManhattanDistance(x1, y1, x2, y2 int) int {
 }
 
 func FactorInt(x int) (factors []int) {
-  primes := PrimeRange(x)
+  primes := PrimesRange(x)
 
   for prime := range primes {
     if x % prime == 0 {
