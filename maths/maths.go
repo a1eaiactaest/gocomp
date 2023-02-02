@@ -69,3 +69,19 @@ func ManhattanDistance(x1, y1, x2, y2 int) int {
 
 	return x + y
 }
+
+
+func FactorInt(x int) (factors []int) {
+  for d := 2; d * d <= x; d++ {
+    for (x % d == 0) {
+      factors = append(factors, d)
+      x /= d
+    }
+  }
+
+  if x > 1 {
+    factors = append(factors, x)
+  }
+
+  return factors
+}
