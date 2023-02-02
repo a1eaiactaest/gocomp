@@ -74,6 +74,7 @@ func ManhattanDistance(x1, y1, x2, y2 int) int {
 func FactorInt(x int) (factors []int) {
 
   factors = append(factors, 1)
+  defer factors = append(factors, x)
 
   for (x % 2 == 0) {
     factors = append(factors, 2)
@@ -91,6 +92,5 @@ func FactorInt(x int) (factors []int) {
     factors = append(factors, x)
   }
 
-  factors = append(factors, x)
   return factors
 }
