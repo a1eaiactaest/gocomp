@@ -91,5 +91,6 @@ func FactorInt(x int) (factors []int) {
     factors = append(factors, x)
   }
 
+  factors = append(factors, x)
   return factors
 }
