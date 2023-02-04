@@ -3,6 +3,7 @@ package files
 import (
 	"bufio"
 	"io/ioutil"
+  "strings"
 	"os"
 )
 
@@ -38,7 +39,7 @@ func FileToLines(path string) (lines []string) {
 func FileToString(fileName string) string {
 	bytes, err := ioutil.ReadFile(fileName)
 	check(err)
-	return string(bytes)
+	return strings.TrimSpace(string(bytes))
 }
 
 // FileToBytes reads a file and returns contents as a byte slice
