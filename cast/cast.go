@@ -7,51 +7,51 @@ import (
 
 // supported types: string
 func ToInt(arg interface{}) int {
-  var val int
-  switch arg.(type) {
-    case string:
-			var err error
-      val, err = strconv.Atoi(arg.(string))
-			if err != nil {
-				panic("there was an error converting string to int " + err.Error())
-			}
+	var val int
+	switch arg.(type) {
+	case string:
+		var err error
+		val, err = strconv.Atoi(arg.(string))
+		if err != nil {
+			panic("there was an error converting string to int " + err.Error())
+		}
 
-    default:
-      panic(fmt.Sprintf("unhandled type for int casting %T", arg))
-  }
-  return val
+	default:
+		panic(fmt.Sprintf("unhandled type for int casting %T", arg))
+	}
+	return val
 }
 
 // supported types: int, byte, rune
 func ToString(arg interface{}) (str string) {
-  switch arg.(type) {
-    case int:
-      str = strconv.Itoa(arg.(int))
+	switch arg.(type) {
+	case int:
+		str = strconv.Itoa(arg.(int))
 
-    case byte:
-      bytes := arg.(byte)
-      str = string(rune(bytes))
+	case byte:
+		bytes := arg.(byte)
+		str = string(rune(bytes))
 
-    case rune:
-      str = string(arg.(rune))
+	case rune:
+		str = string(arg.(rune))
 
-    default:
-      panic(fmt.Sprintf("unhandled type for int casting %T", arg))
-  }
-  return str
+	default:
+		panic(fmt.Sprintf("unhandled type for int casting %T", arg))
+	}
+	return str
 }
 
 func ascii_int_to_char(acode int) string {
-  return string(rune(acode))
+	return string(rune(acode))
 }
 
 func ReverseString(str string) (result string) {
-  for _, v := range str {
-    result = string(v) + result
-  }
-  return 
+	for _, v := range str {
+		result = string(v) + result
+	}
+	return
 }
 
 func IsPalindrome(s1 string) (ret bool) {
-  return ReverseString(s1) == s1
+	return ReverseString(s1) == s1
 }
