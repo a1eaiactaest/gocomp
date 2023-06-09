@@ -86,3 +86,11 @@ func FactorInt(n int) (factors []int) {
   return 
 }
 
+
+func IntPow(x, y int) int {
+  res := 1
+  for i := 0; i < y; i++ {
+    res *= x
+  }
+  return res
+}
