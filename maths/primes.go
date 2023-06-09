@@ -78,16 +78,16 @@ func SumOfProperDivisors(n int) int {
     if ok {
       m[prime] += 1
     } else {
-      m[prime] -= 1
+      m[prime] = 1
     }
   }
 
   ret := 1
 
   for prime, exponents := range m {
-    ret *= IntPow(prime, exponents+1)-1 / (prime-1)
+    ret *= (IntPow(prime, exponents+1)-1) / (prime-1)
   }
-  return ret - n
 
+  return ret - n
 }
 
