@@ -50,19 +50,19 @@ func PrimesRange(n int) (primes []int) {
 
 func PrimeFactors(n int) (ret []int) {
   for n % 2 == 0 {
-    pfs = append(pfs, 2)
+    ret = append(ret, 2)
     n = n / 2
   }
 
   for i := 3; i*i <= n; i+=2 {
     for n % i == 0 {
-      pfs = append(pfs, i)
+      ret = append(ret, i)
       n = n / i 
     }
   }
 
   if n > 2 {
-    pfs = append(pfs, n)
+    ret = append(ret, n)
   }
 
   return
@@ -85,7 +85,7 @@ func SumOfProperDivisors(n int) int {
   ret := 1
 
   for prime, exponents := range m {
-    ret *= int(math.Pow(prime, exponents+1)-1) / (prime-1)
+    ret *= IntPow(prime, exponents+1)-1 / (prime-1)
   }
   return ret - n
 
