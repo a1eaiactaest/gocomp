@@ -72,7 +72,7 @@ func SumOfProperDivisors(n int) int {
   pfs := PrimeFactors(n)
 
   // {prime: prime_exponents}
-  m := map(map[int]int)
+  m := make(map[int]int)
   for _, prime := range pfs {
     _, ok := m[prime]
     if ok {
@@ -85,20 +85,9 @@ func SumOfProperDivisors(n int) int {
   ret := 1
 
   for prime, exponents := range m {
-    ret *= (int(math.Pow(prime, exponents+1)-1) / (prime-1)
+    ret *= int(math.Pow(prime, exponents+1)-1) / (prime-1)
   }
   return ret - n
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
