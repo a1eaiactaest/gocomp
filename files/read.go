@@ -3,8 +3,8 @@ package files
 import (
 	"bufio"
 	"io/ioutil"
-  "strings"
 	"os"
+	"strings"
 )
 
 func check(e error) {
@@ -48,4 +48,3 @@ func FileToBytes(fileName string) []byte {
 	check(err)
 	return bytes
 }
-

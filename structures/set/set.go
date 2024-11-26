@@ -18,7 +18,7 @@ func (s StringSet) Has(val string) bool {
 }
 
 func (s StringSet) Add(val string) {
-	s[val] = true;
+	s[val] = true
 }
 
 func (s StringSet) Remove(val string) {
@@ -29,12 +29,11 @@ func (s StringSet) Remove(val string) {
 func (s StringSet) Keys() []string {
 	var keys []string
 
-	for k := range s{
+	for k := range s {
 		keys = append(keys, k)
 	}
 	return keys
 }
-
 
 type IntSet map[int]bool
 
@@ -54,7 +53,7 @@ func (s IntSet) Has(val int) bool {
 }
 
 func (s IntSet) Add(val int) {
-	s[val] = true;
+	s[val] = true
 }
 
 func (s IntSet) Remove(val int) {

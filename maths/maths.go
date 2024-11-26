@@ -46,7 +46,6 @@ func ProdIntSlice(nums []int) int {
 	return ret
 }
 
-
 func PythagoreanDistance(x1, y1, x2, y2 int) float64 {
 	x := float64(x1 - x2)
 	y := float64(y1 - y2)
@@ -71,26 +70,25 @@ func ManhattanDistance(x1, y1, x2, y2 int) int {
 }
 
 func FactorInt(n int) (factors []int) {
-  var i float64 = 1.0
-  x := float64(n)
-  for i <= math.Sqrt(float64(x)) {
-    if int(x) % int(i) == 0 {
-      if x / i == i {
-        factors = append(factors, int(i))
-      } else {
-        factors = append(factors, int(i), int(x/i))
-      }
-    }
-    i += 1.0
-  }
-  return 
+	var i float64 = 1.0
+	x := float64(n)
+	for i <= math.Sqrt(float64(x)) {
+		if int(x)%int(i) == 0 {
+			if x/i == i {
+				factors = append(factors, int(i))
+			} else {
+				factors = append(factors, int(i), int(x/i))
+			}
+		}
+		i += 1.0
+	}
+	return
 }
 
-
 func IntPow(x, y int) int {
-  res := 1
-  for i := 0; i < y; i++ {
-    res *= x
-  }
-  return res
+	res := 1
+	for i := 0; i < y; i++ {
+		res *= x
+	}
+	return res
 }

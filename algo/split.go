@@ -4,7 +4,7 @@ import "strings"
 
 func SplitOn(in string, cutset []string) []string {
 	parts := strings.Split(in, cutset[0])
-	cutset = cutset[1:] 
+	cutset = cutset[1:]
 	var finished bool
 
 	for !finished && len(cutset) > 0 {
